@@ -4,10 +4,12 @@
  
   <h1 :style="colorcontador" >Mi contador {{contador}}</h1>
   <button @click="accionIncrementar">Aumentar</button>
+  <BtnDisminuir />
   </div>
 </template>
 
 <script>
+import BtnDisminuir from '../components/BtnDisminuir'
 import { mapState, mapMutations, mapActions } from "vuex";
 
 
@@ -15,7 +17,7 @@ import { mapState, mapMutations, mapActions } from "vuex";
 export default {
   name: 'Home',
   components: {
-    
+    BtnDisminuir
   },
   computed:{
     ...mapState(['contador']),
